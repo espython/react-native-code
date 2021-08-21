@@ -19,6 +19,10 @@
 		8B43401926CE7469001AE43B /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D485E54B1964252863706B3 /* Quicksand-SemiBold.ttf */; };
 		985F20E035BC64EF8CDFF338 /* libPods-MichaelReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8131F92A06806185A09F39 /* libPods-MichaelReactNative.a */; };
 		B3680074B078C851699AB205 /* libPods-MichaelReactNative-MichaelReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16916A51357F5A3985D78918 /* libPods-MichaelReactNative-MichaelReactNativeTests.a */; };
+		71948B0138BB4C51B061F793 /* Product Sans Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6699B937DDC8433F8D847ADE /* Product Sans Bold Italic.ttf */; };
+		E7BA150FA9C14D45B827DC71 /* Product Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EC714476E524665897B0C59 /* Product Sans Bold.ttf */; };
+		C5FE86E218A745E59227E355 /* Product Sans Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CAE0C0C107B40608CF837E3 /* Product Sans Italic.ttf */; };
+		6B8D1986D8264177821C6A64 /* Product Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4779B4C85DA4B3C887AB5FF /* Product Sans Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EE1C71BADBF348B4B8CF91E4 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Light.ttf"; path = "../assets/fonts/Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		F6A1E11B6A4245879D789091 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Medium.ttf"; path = "../assets/fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		6699B937DDC8433F8D847ADE /* Product Sans Bold Italic.ttf */ = {isa = PBXFileReference; name = "Product Sans Bold Italic.ttf"; path = "../assets/fonts/Product Sans Bold Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0EC714476E524665897B0C59 /* Product Sans Bold.ttf */ = {isa = PBXFileReference; name = "Product Sans Bold.ttf"; path = "../assets/fonts/Product Sans Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6CAE0C0C107B40608CF837E3 /* Product Sans Italic.ttf */ = {isa = PBXFileReference; name = "Product Sans Italic.ttf"; path = "../assets/fonts/Product Sans Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B4779B4C85DA4B3C887AB5FF /* Product Sans Regular.ttf */ = {isa = PBXFileReference; name = "Product Sans Regular.ttf"; path = "../assets/fonts/Product Sans Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,10 @@
 				91F68EB7EC13432DBDAA28BA /* SimpleLineIcons.ttf */,
 				B97FAC58466E432681BB4D08 /* Zocial.ttf */,
 				DE484A2FD9BB4EF68382C6ED /* Quicksand-VariableFont_wght.ttf */,
+				6699B937DDC8433F8D847ADE /* Product Sans Bold Italic.ttf */,
+				0EC714476E524665897B0C59 /* Product Sans Bold.ttf */,
+				6CAE0C0C107B40608CF837E3 /* Product Sans Italic.ttf */,
+				B4779B4C85DA4B3C887AB5FF /* Product Sans Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -304,6 +316,10 @@
 				8B43401726CE7469001AE43B /* Quicksand-Medium.ttf in Resources */,
 				8B43401826CE7469001AE43B /* Quicksand-Regular.ttf in Resources */,
 				8B43401926CE7469001AE43B /* Quicksand-SemiBold.ttf in Resources */,
+				71948B0138BB4C51B061F793 /* Product Sans Bold Italic.ttf in Resources */,
+				E7BA150FA9C14D45B827DC71 /* Product Sans Bold.ttf in Resources */,
+				C5FE86E218A745E59227E355 /* Product Sans Italic.ttf in Resources */,
+				6B8D1986D8264177821C6A64 /* Product Sans Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,12 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TopNewsScreen from '../screens/TopNewsScreen';
 import TrendingNewsScreen from '../screens/TrendingNewsScreen';
-import {getHeaderTitle} from '@react-navigation/elements';
-import {Box, Container, Image} from 'native-base';
-import {entertainment, forYouTabBarIcon, international} from '../assets';
+import { getHeaderTitle } from '@react-navigation/elements';
+import { entertainment, forYouTabBarIcon, international } from '../assets';
 import ForYouScreen from '../screens/ForYouScreen';
 import TopBar from '../components/TopBar';
 import TabBarIcon from '../components/TabBarIcon';
-import {SafeAreaView} from 'react-native-safe-area-context';
 
 const ForYouTbaNav = () => {
   const Tab = createBottomTabNavigator();
@@ -17,18 +15,29 @@ const ForYouTbaNav = () => {
       initialRouteName="ForYou"
       screenOptions={{
         tabBarActiveTintColor: '#000',
+        tabBarStyle: {
+          paddingTop: 4,
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: -1,
+          },
+          shadowRadius: 5,
+          shadowOpacity: 0.2,
+        },
         tabBarLabelStyle: {
           fontFamily: 'Quicksand',
           fontSize: 12,
           fontWeight: '700',
+          paddingTop: 4,
         },
-        header: ({navigation, route, options}) => {
+        header: ({ navigation, route, options }) => {
           const title = getHeaderTitle(options, route.name);
 
           return <TopBar style={options.headerStyle} title={title} />;
         },
         headerStyle: {
-          height: 80, // Specify the height of your custom header
+          height: 64, // Specify the height of your custom header
         },
       }}>
       <Tab.Screen
@@ -36,7 +45,7 @@ const ForYouTbaNav = () => {
         component={ForYouScreen}
         options={{
           tabBarLabel: 'For you',
-          tabBarIcon: ({size}) => (
+          tabBarIcon: ({ size }) => (
             <TabBarIcon size={size} source={forYouTabBarIcon} />
           ),
         }}
@@ -46,7 +55,7 @@ const ForYouTbaNav = () => {
         component={TopNewsScreen}
         options={{
           tabBarLabel: 'Explore',
-          tabBarIcon: ({size}) => (
+          tabBarIcon: ({ size }) => (
             <TabBarIcon size={size} source={international} />
           ),
         }}
@@ -56,7 +65,7 @@ const ForYouTbaNav = () => {
         component={TrendingNewsScreen}
         options={{
           tabBarLabel: 'Special',
-          tabBarIcon: ({size}) => (
+          tabBarIcon: ({ size }) => (
             <TabBarIcon size={size} source={entertainment} />
           ),
         }}

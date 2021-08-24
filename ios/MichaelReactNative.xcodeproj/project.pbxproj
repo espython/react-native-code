@@ -23,6 +23,8 @@
 		E7BA150FA9C14D45B827DC71 /* Product Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EC714476E524665897B0C59 /* Product Sans Bold.ttf */; };
 		C5FE86E218A745E59227E355 /* Product Sans Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CAE0C0C107B40608CF837E3 /* Product Sans Italic.ttf */; };
 		6B8D1986D8264177821C6A64 /* Product Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4779B4C85DA4B3C887AB5FF /* Product Sans Regular.ttf */; };
+		E585B124479C4C19A4C474A4 /* Rubik-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0634B73CDB840EE9721AF67 /* Rubik-Italic-VariableFont_wght.ttf */; };
+		25DD695D69FA4B65A79FB810 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1679EF00364F41E4926F7E75 /* Rubik-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		0EC714476E524665897B0C59 /* Product Sans Bold.ttf */ = {isa = PBXFileReference; name = "Product Sans Bold.ttf"; path = "../assets/fonts/Product Sans Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6CAE0C0C107B40608CF837E3 /* Product Sans Italic.ttf */ = {isa = PBXFileReference; name = "Product Sans Italic.ttf"; path = "../assets/fonts/Product Sans Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B4779B4C85DA4B3C887AB5FF /* Product Sans Regular.ttf */ = {isa = PBXFileReference; name = "Product Sans Regular.ttf"; path = "../assets/fonts/Product Sans Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0634B73CDB840EE9721AF67 /* Rubik-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "Rubik-Italic-VariableFont_wght.ttf"; path = "../assets/fonts/Rubik-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1679EF00364F41E4926F7E75 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "Rubik-VariableFont_wght.ttf"; path = "../assets/fonts/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				0EC714476E524665897B0C59 /* Product Sans Bold.ttf */,
 				6CAE0C0C107B40608CF837E3 /* Product Sans Italic.ttf */,
 				B4779B4C85DA4B3C887AB5FF /* Product Sans Regular.ttf */,
+				B0634B73CDB840EE9721AF67 /* Rubik-Italic-VariableFont_wght.ttf */,
+				1679EF00364F41E4926F7E75 /* Rubik-VariableFont_wght.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -320,6 +326,8 @@
 				E7BA150FA9C14D45B827DC71 /* Product Sans Bold.ttf in Resources */,
 				C5FE86E218A745E59227E355 /* Product Sans Italic.ttf in Resources */,
 				6B8D1986D8264177821C6A64 /* Product Sans Regular.ttf in Resources */,
+				E585B124479C4C19A4C474A4 /* Rubik-Italic-VariableFont_wght.ttf in Resources */,
+				25DD695D69FA4B65A79FB810 /* Rubik-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

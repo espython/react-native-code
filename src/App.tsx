@@ -4,10 +4,10 @@
 
 import React from 'react';
 // import {useColorScheme} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 // import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {Provider} from 'react-redux';
-import {Box, NativeBaseProvider} from 'native-base';
+import { Provider } from 'react-redux';
+import { Box, NativeBaseProvider } from 'native-base';
 
 import store from './redux/store';
 import ForYouTbaNav from './navigations/ForYouTbaNav';

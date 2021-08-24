@@ -31,5 +31,5 @@ export interface RssFeedResponse {
 export interface HuffPostNewsState {
   response?: RssFeedResponse | null | undefined;
   loading?: boolean;
-  error?: { isError: boolean; value: Error } | null | undefined;
+  error?: { isError: boolean; message: string } | null | undefined;
 }

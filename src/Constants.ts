@@ -10,3 +10,10 @@ export const NBR_NEWS_RSS_FEED = 'https://feeds.npr.org/1001/rss.xml';
 
 export const BBCI_NEWS_RSS_FEED =
   'https://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml';
+
+export const Colors = {
+  heading: '#A6A4B4',
+  mainLight: '#FFFFFF',
+  textDark: '#514F64',
+  secondaryTextLight: '#BBBBBB',
+};

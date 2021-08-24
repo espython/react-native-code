@@ -5,3 +5,5 @@ export const night = require('../assets/icons/night.png');
 export const headphone = require('../assets/icons/headphones.png');
 export const journalist = require('../assets/icons/journalist.png');
 export const search = require('../assets/icons/search.png');
+export const rising = require('../assets/icons/rising.png');
+// export const tiger = require('../assets/images/Rectangle 3.png');

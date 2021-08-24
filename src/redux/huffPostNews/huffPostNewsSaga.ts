@@ -18,7 +18,7 @@ export function* huffPostNewsSaga() {
     console.log('Error 777', error);
     yield put(
       setHuffPostNewsData({
-        error: { isError: true, value: error },
+        error: { isError: true, message: error.message },
         loading: false,
       }),
     );

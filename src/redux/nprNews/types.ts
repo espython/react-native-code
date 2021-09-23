@@ -33,5 +33,5 @@ export interface RssFeedResponse {
 export interface NbrNewsState {
   response?: RssFeedResponse | null | undefined;
   loading?: boolean;
-  error?: { isError: boolean; value: Error } | null | undefined;
+  error?: { isError: boolean; value: string } | null | undefined;
 }

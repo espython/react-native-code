@@ -20,24 +20,22 @@ export interface OnScrollChangeProps {
 const articlesSelector = createSelector(
   (state: RootState) => state.abcNewsState.response?.items,
   (items: RssFeedItem[]) =>
-    items?.filter(item => item.media.thumbnail !== undefined).slice(0, 4),
+    items?.filter(item => item.media.thumbnail !== undefined).slice(0, 4)
 );
 
-const SecondaryImageCarousel = ({
-  categories,
-}: SecondaryImageCarouselCompProps) => {
+const SecondaryImageCarousel = () => {
   const items = useAppSelector(articlesSelector);
   const compState = useAppSelector(state => state.abcNewsState);
   const dispatch = useAppDispatch();
 
   const onScrollChange = ({ nativeEvent }: OnScrollChangeProps) => {
     const slide = Math.ceil(
-      nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width,
+      nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width
     );
     if (slide !== compState.active?.index) {
       // setState(prevState => ({ ...prevState, active: slide }));
       dispatch(
-        setActiveArticle({ active: { index: slide, article: items[slide] } }),
+        setActiveArticle({ active: { index: slide, article: items[slide] } })
       );
     }
   };

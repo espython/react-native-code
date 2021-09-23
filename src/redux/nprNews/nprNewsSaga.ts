@@ -1,6 +1,6 @@
 import { parse } from 'rss-to-json';
-
 import { call, put } from 'redux-saga/effects';
+
 import { setNbrNewsData } from './nprNewsSlice';
 import { RssFeedResponse } from './types';
 import { NBR_NEWS_RSS_FEED } from '../../Constants';
@@ -17,9 +17,9 @@ export function* nbrNewsSaga() {
   } catch (error) {
     yield put(
       setNbrNewsData({
-        error: { isError: true, value: error },
+        error: { isError: true, value: error.message as string },
         loading: false,
-      }),
+      })
     );
   }
 }

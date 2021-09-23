@@ -1,21 +1,35 @@
 import React from 'react';
-import {Box, HStack, Icon, Input, Text} from 'native-base';
+import { Box, Icon, Input, Text } from 'native-base';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import {StyleProp, ViewStyle} from 'react-native';
-import {headphone, journalist, night, search} from '../assets';
+import auth from '@react-native-firebase/auth';
+import {
+  StyleProp,
+  StyleSheet,
+  TouchableOpacity,
+  ViewStyle,
+} from 'react-native';
+import { headphone, journalist, night, search } from '../assets';
 import TabBarIcon from './TabBarIcon';
+import { useAppDispatch, useAppSelector } from '../redux/store';
+import { setPodCastScreenData } from '../redux/podcasts/podcastSlice';
+import { useNavigation } from '@react-navigation/core';
 
 export interface TobParProps {
   style: StyleProp<ViewStyle>;
-  title: string;
+  title?: string;
 }
 
-const TopBar = ({style}: TobParProps) => {
+const TopBar = () => {
+  const navigation = useNavigation();
+  const dispatch = useAppDispatch();
+  const showPodcastScreen = useAppSelector(
+    state => state.podcastScreenState.showPodcastScreen
+  );
   return (
-    <HStack
+    <Box
       backgroundColor="white"
-      style={style}
-      shadow={1}
+      flexDirection="row"
+      style={styles.container}
       px={2}
       justifyContent="space-around"
       alignItems="center">
@@ -50,10 +64,40 @@ const TopBar = ({style}: TobParProps) => {
           placeholderTextColor: 'blueGray.50',
         }}
       />
-      <TabBarIcon source={headphone} size={15} />
-      <TabBarIcon source={journalist} size={15} />
-    </HStack>
+      <TouchableOpacity
+        onPress={() =>
+          dispatch(
+            setPodCastScreenData({ showPodcastScreen: !showPodcastScreen })
+          )
+        }>
+        <TabBarIcon source={headphone} size={15} />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={
+          () => navigation.navigate('Settings')
+          // auth()
+          //   .signOut()
+          //   .then(() => console.log('User signed out!'))
+        }>
+        <TabBarIcon source={journalist} size={15} />
+      </TouchableOpacity>
+    </Box>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    height: 64,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+
+    elevation: 11,
+  },
+});
 
 export default TopBar;

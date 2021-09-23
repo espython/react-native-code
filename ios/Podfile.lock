@@ -9,7 +9,52 @@ PODS:
     - React-Core (= 0.64.1)
     - React-jsi (= 0.64.1)
     - ReactCommon/turbomodule/core (= 0.64.1)
+  - Firebase/Auth (8.7.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 8.7.0)
+  - Firebase/CoreOnly (8.7.0):
+    - FirebaseCore (= 8.7.0)
+  - FirebaseAuth (8.7.0):
+    - FirebaseCore (~> 8.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - FirebaseCore (8.7.0):
+    - FirebaseCoreDiagnostics (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+  - FirebaseCoreDiagnostics (8.7.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - GoogleUtilities/Logger (~> 7.4)
+    - nanopb (~> 2.30908.0)
   - glog (0.3.5)
+  - GoogleDataTransport (9.1.0):
+    - GoogleUtilities/Environment (~> 7.2)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.5.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.5.2):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.5.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/Network (7.5.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.5.2)"
+  - GoogleUtilities/Reachability (7.5.2):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.7.0)
+  - nanopb (2.30908.0):
+    - nanopb/decode (= 2.30908.0)
+    - nanopb/encode (= 2.30908.0)
+  - nanopb/decode (2.30908.0)
+  - nanopb/encode (2.30908.0)
+  - PromisesObjC (2.0.0)
   - RCT-Folly (2020.01.13.00):
     - boost-for-react-native
     - DoubleConversion
@@ -203,7 +248,13 @@ PODS:
     - React-jsi (= 0.64.1)
     - React-perflogger (= 0.64.1)
   - React-jsinspector (0.64.1)
+  - react-native-pager-view (5.4.4):
+    - React-Core
   - react-native-safe-area-context (3.3.0):
+    - React-Core
+  - react-native-slider (4.1.6):
+    - React-Core
+  - react-native-track-player (2.0.0-rc18):
     - React-Core
   - React-perflogger (0.64.1)
   - React-RCTActionSheet (0.64.1):
@@ -271,6 +322,13 @@ PODS:
     - React-perflogger (= 0.64.1)
   - RNCAsyncStorage (1.15.6):
     - React-Core
+  - RNFBApp (12.8.0):
+    - Firebase/CoreOnly (= 8.7.0)
+    - React-Core
+  - RNFBAuth (12.8.0):
+    - Firebase/Auth (= 8.7.0)
+    - React-Core
+    - RNFBApp
   - RNScreens (3.5.0):
     - React-Core
     - React-RCTImage
@@ -298,7 +356,10 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
+  - react-native-track-player (from `../node_modules/react-native-track-player`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -312,6 +373,8 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
+  - "RNFBAuth (from `../node_modules/@react-native-firebase/auth`)"
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
@@ -320,6 +383,15 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - Firebase
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - GoogleDataTransport
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - nanopb
+    - PromisesObjC
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -352,8 +424,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-pager-view:
+    :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-slider:
+    :path: "../node_modules/@react-native-community/slider"
+  react-native-track-player:
+    :path: "../node_modules/react-native-track-player"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -380,6 +458,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNFBApp:
+    :path: "../node_modules/@react-native-firebase/app"
+  RNFBAuth:
+    :path: "../node_modules/@react-native-firebase/auth"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNSVG:
@@ -394,7 +476,16 @@ SPEC CHECKSUMS:
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: 7b423f9e248eae65987838148c36eec1dbfe0b53
   FBReactNativeSpec: 8f23746db6912c6c5608f3125810c476c8041106
+  Firebase: bc9325d5ee2041524bac78a5213d0e530c651309
+  FirebaseAuth: 2e7d029977648c67a5d51a263d4cbab76d34cf12
+  FirebaseCore: f4804c1d3f4bbbefc88904d15653038f2c99ddf7
+  FirebaseCoreDiagnostics: b63732f581a1c6a453ec7241f9ab60b3a5bd3450
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
+  GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
+  GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: ec2ebc96b7bfba3ca5c32740f5a0c6a014a274d2
   RCTTypeSafety: 22567f31e67c3e088c7ac23ea46ab6d4779c0ea5
@@ -406,7 +497,10 @@ SPEC CHECKSUMS:
   React-jsi: 5de8204706bd872b78ea646aee5d2561ca1214b6
   React-jsiexecutor: 124e8f99992490d0d13e0649d950d3e1aae06fe9
   React-jsinspector: 500a59626037be5b3b3d89c5151bc3baa9abf1a9
+  react-native-pager-view: 5ab4d0b4b44d89f77310cb3eb8129745f274ce55
   react-native-safe-area-context: 61c8c484a3a9e7d1fda19f7b1794b35bbfd2262a
+  react-native-slider: c983657bf7d95450c8d64cceb4b318452b24ccd0
+  react-native-track-player: 7393577bc49025b057d1439db8e71db94da73179
   React-perflogger: aad6d4b4a267936b3667260d1f649b6f6069a675
   React-RCTActionSheet: fc376be462c9c8d6ad82c0905442fd77f82a9d2a
   React-RCTAnimation: ba0a1c3a2738be224a08092fa7f1b444ab77d309
@@ -420,6 +514,8 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: ff951a0c241bfaefc4940a3f1f1a229e7cb32fa6
   ReactCommon: bedc99ed4dae329c4fcf128d0c31b9115e5365ca
   RNCAsyncStorage: b7c6564ce662366dd44d0189456183ef7eda2d4d
+  RNFBApp: b97d6654509a5852d49f0abf93be76b300fd2e2c
+  RNFBAuth: 07fd836f31fe09d465c22476a052766251af1c49
   RNScreens: 01ab149b5dd5c27f5ff26741b1d2bdf2cee1af35
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4

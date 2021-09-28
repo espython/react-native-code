@@ -5,6 +5,7 @@ import { huffPostNewsSaga } from './huffPostNews/huffPostNewsSaga';
 import { mainNewsSaga } from './mainNews/mainNewsSaga';
 import { nbrNewsSaga } from './nprNews/nprNewsSaga';
 import { podcastsSaga } from './podcasts/podcastSaga';
+import { youtubeVideosSaga } from './youtube/youtubeSaga';
 
 export default function* rootSaga() {
   yield all([
@@ -14,5 +15,6 @@ export default function* rootSaga() {
     nbrNewsSaga(),
     bbcNewsSaga(),
     podcastsSaga(),
+    youtubeVideosSaga(),
   ]);
 }

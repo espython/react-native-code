@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Icon, Input, Text } from 'native-base';
+import { Box, Icon, Input, Spacer, Text } from 'native-base';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import auth from '@react-native-firebase/auth';
 import {
@@ -30,11 +30,11 @@ const TopBar = () => {
       backgroundColor="white"
       flexDirection="row"
       style={styles.container}
-      px={2}
+      px={4}
       justifyContent="space-around"
       alignItems="center">
-      <Box flexDirection="row">
-        <TabBarIcon source={night} size={15} />
+      <Box flexDirection="row" flex={1}>
+        <TabBarIcon source={night} size={8} />
         <Text fontSize={12} color="blue.600">
           23
         </Text>
@@ -46,7 +46,8 @@ const TopBar = () => {
           color="blue.600"
         />
       </Box>
-      <Input
+
+      {/* <Input
         variant="filled"
         borderRadius={24}
         InputLeftElement={
@@ -63,23 +64,24 @@ const TopBar = () => {
         _dark={{
           placeholderTextColor: 'blueGray.50',
         }}
-      />
+      /> */}
       <TouchableOpacity
         onPress={() =>
           dispatch(
             setPodCastScreenData({ showPodcastScreen: !showPodcastScreen })
           )
         }>
-        <TabBarIcon source={headphone} size={15} />
+        <TabBarIcon source={headphone} size={8} />
       </TouchableOpacity>
       <TouchableOpacity
+        style={{ marginLeft: 24 }}
         onPress={
           () => navigation.navigate('Settings')
           // auth()
           //   .signOut()
           //   .then(() => console.log('User signed out!'))
         }>
-        <TabBarIcon source={journalist} size={15} />
+        <TabBarIcon source={journalist} size={8} />
       </TouchableOpacity>
     </Box>
   );

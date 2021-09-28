@@ -9,6 +9,7 @@ import nbrNewsState from './nprNews/nprNewsSlice';
 import bbcNewsState from './bbcNews/bbcNewsSlice';
 import podcastScreenState from './podcasts/podcastSlice';
 import userState from './user/userSlice';
+import youtubeSlice from './youtube/youtubeSlice';
 import rootSaga from './rootSagas';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   bbcNewsState,
   podcastScreenState,
   userState,
+  youtubeSlice,
 });
 
 const store = configureStore({
